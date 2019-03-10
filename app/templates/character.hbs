@@ -1,0 +1,30 @@
+{{#bs-form formLayout="horizontal" model=this as |form|}}
+  {{form.element controlType="text" label="Name" placeholder="Not Sure" property="input" required=true}}
+  {{#bs-button-group value=raceValue type="radio" onChange=(action (mut raceValue)) as |bg| }}
+    {{#bg.button value="Dwarf"}}Dwarf{{/bg.button}}
+    {{#bg.button value="Elf"}}Elf{{/bg.button}}
+    {{#bg.button value="Half-elf"}}Half-Elf{{/bg.button}}
+    {{#bg.button value="Human"}}Human{{/bg.button}}
+    {{#bg.button value="Hobbit"}}Hobbit{{/bg.button}}
+  {{/bs-button-group}}
+  <hr/>
+  {{#bs-button-group value=alignmentValue type="radio" onChange=(action (mut alignmentValue)) as |bg| }}
+    {{#bg.button value="Lawful Good"}}Lawful Good{{/bg.button}}
+    {{#bg.button value="Neutral Good"}}Neutral Good{{/bg.button}}
+    {{#bg.button value="Chaotic Good"}}Chaotic Good{{/bg.button}}
+    {{#bg.button value="Lawful Neutral"}}Lawful Good{{/bg.button}}
+    {{#bg.button value="True Neutral"}}True Neutral{{/bg.button}}
+    {{#bg.button value="Chaotic Neutral"}}Chaotic Neutral{{/bg.button}}
+    {{#bg.button value="Lawful Evil"}}Lawful Evil{{/bg.button}}
+    {{#bg.button value="Neutral Evil"}}Neutral Evil{{/bg.button}}
+    {{#bg.button value="Chaotic Evil"}}Chaotic Evil{{/bg.button}}
+  {{/bs-button-group}}
+  <hr/>
+  {{form.element controlType="text" label="Strength" placeholder="11" property="input" required=true}}
+  {{form.element controlType="text" label="Dexterity" placeholder="11" property="input" required=true}}
+  {{form.element controlType="text" label="Constitution" placeholder="11" property="input" required=true}}
+  {{form.element controlType="text" label="Inteligence" placeholder="11" property="input" required=true}}
+  {{form.element controlType="text" label="Wistom" placeholder="11" property="input" required=true}}
+  {{form.element controlType="text" label="Charisma" placeholder="11" property="input" required=true}}
+  {{bs-button defaultText="Save" type="primary" buttonType="submit"}}
+{{/bs-form}}
